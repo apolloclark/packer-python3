@@ -26,7 +26,6 @@
       ],
       "changes": [
         "USER root",
-        "VOLUME /root",
         "WORKDIR /root",
         "ENTRYPOINT [\"/bin/bash\", \"-c\"]",
         "CMD [\"bash\"]"
