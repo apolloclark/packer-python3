@@ -1,6 +1,6 @@
 {
   "variables": {
-    "ansible_host": "{{env `PACKAGE`}}-{{env `IMAGE_NAME`}}",
+    "ansible_host": "{{env `PACKAGE`}}-{{env `IMAGE_NAME`}}-{{timestamp}}",
     "ansible_connection": "docker",
     "base_image": "{{env `BASE_IMAGE`}}",
     "build_date": "{{isotime \"20060102\"}}",
