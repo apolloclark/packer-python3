@@ -8,13 +8,13 @@ if [ -x "$(command -v apt-get)" ]; then
     apt-get upgrade -yq
     apt-get install -yq aptitude git wget curl build-essential zlib1g-dev \
       libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev \
-      libffi-dev libsqlite3-dev
+      libffi-dev libsqlite3-dev gnupg2
 fi
 
 if [ -x "$(command -v yum)" ]; then
     yum update -y
     yum install -y yum-utils git wget curl make gcc openssl-devel bzip2-devel \
-      libffi-devel sqlite-devel
+      libffi-devel sqlite-devel gnupg2
 fi
 
 # install Python
