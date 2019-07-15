@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-export PYTHON_VERSION="3.7.3"
+export PYTHON_VERSION="3.7.4"
 
 if [ -x "$(command -v apt-get)" ]; then
     export DEBIAN_FRONTEND=noninteractive

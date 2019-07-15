@@ -17,13 +17,42 @@ cd ./packer-python3
 # set your Docker hub username
 export DOCKER_USERNAME="apolloclark" # $(whoami)
 
-# ./all.sh
+# build with bash
 ./build_packer_docker.sh
+
+
+
+# clean up ALL previous builds
+./clean_packer_docker.sh
+
+# Gradle, clean up previous builds, from today
+gradle clean --parallel --project-dir gradle-build
+
+# Gradle, build all images, in parallel
+gradle testBash --parallel --project-dir gradle-build
+
+# Gradle, build all images, in parallel, forced rebuild
+gradle testBash --parallel --rerun-tasks --project-dir gradle-build
+
+# Gradle, build only specific OS images
+gradle ubuntu18.04:testBash --project-dir gradle-build
+gradle ubuntu16.04:testBash --project-dir gradle-build
+gradle centos7:testBash --project-dir gradle-build
+
+# Gradle, build only specific OS images, forced rebuild
+gradle ubuntu18.04:testBash --rerun-tasks --project-dir gradle-build
+gradle ubuntu16.04:testBash --rerun-tasks --project-dir gradle-build
+gradle centos7:testBash --rerun-tasks --project-dir gradle-build
+
+# Gradle, build only specific OS images
+gradle ubuntu18.04:testBash --project-dir gradle-build --dry-run
+gradle ubuntu16.04:testBash --project-dir gradle-build --dry-run
+gradle centos7:testBash --project-dir gradle-build --dry-run
 ```
 
 ## Build Details
 
 ```shell
-Python 3.7.2, 2018-12-24
+Python 3.7.4, 2019-07-08
 https://www.python.org/downloads/
 ```

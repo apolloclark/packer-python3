@@ -51,6 +51,11 @@
         "type": "docker-tag",
         "repository": "{{ user `username` }}/{{user `package`}}",
         "tag": "{{user `package_version`}}-{{user `image_name`}}"
+      },
+      {
+        "type": "manifest",
+        "output": "manifest.json",
+        "strip_path": true
       }
     ]
   ]
