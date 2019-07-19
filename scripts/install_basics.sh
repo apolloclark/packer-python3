@@ -6,9 +6,9 @@ if [ -x "$(command -v apt-get)" ]; then
     export DEBIAN_FRONTEND=noninteractive
     apt-get update
     apt-get upgrade -yq
-    apt-get install -yq aptitude git wget curl build-essential zlib1g-dev \
-      libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev \
-      libffi-dev libsqlite3-dev gnupg2
+    apt-get install -yq aptitude software-properties-common build-essential \
+      nano curl wget git gnupg2 apt-transport-https zlib1g-dev libncurses5-dev \
+      libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev
 fi
 
 if [ -x "$(command -v yum)" ]; then
