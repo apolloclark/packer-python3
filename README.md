@@ -11,11 +11,15 @@ Packer, Ansible, Serverspec, project to create Python 3.x VM, AWS AMI, and Docke
 
 ## Install
 ```shell
-git clone https://github.com/apolloclark/packer-python3
+git clone --recurse-submodules https://github.com/apolloclark/packer-python3
 cd ./packer-python3
+
+# update submodules
+git submodule update --recursive --remote
 
 # set your Docker hub username
 export DOCKER_USERNAME="apolloclark" # $(whoami)
+export DOCKER_PASSWORD=""
 
 # build with bash
 ./build_packer_docker.sh
