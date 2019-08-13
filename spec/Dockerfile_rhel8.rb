@@ -40,9 +40,9 @@ describe "Dockerfile" do
 
 
 
-  it "runs the right version of Ubuntu" do
-    expect(os_version).to include("Ubuntu")
-    expect(os_version).to include("16.04")
+  it "runs the right version of RHEL" do
+    expect(os_version).to include("Red Hat")
+    expect(os_version).to include("release 8")
   end
 
   it "runs as root user" do
@@ -55,7 +55,6 @@ describe "Dockerfile" do
     its(:exit_status) { should eq 0 }
     its(:stdout) { should contain ENV['PACKAGE_VERSION'] }
   end
-
   describe command("pip --version") do
     its(:exit_status) { should eq 0 }
   end

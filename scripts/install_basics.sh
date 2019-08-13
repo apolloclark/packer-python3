@@ -12,13 +12,13 @@ if [ -x "$(command -v apt-get)" ]; then
 elif [ -x "$(command -v dnf)" ]; then
     dnf makecache
     dnf --assumeyes install yum-utils git wget curl make gcc openssl-devel bzip2-devel \
-      libffi-devel sqlite-devel gnupg2 xz
+      libffi-devel sqlite-devel gnupg2 xz tar
     dnf clean all
 elif [ -x "$(command -v yum)" ]; then
     yum makecache fast
     yum update -y
     yum install -y yum-utils git wget curl make gcc openssl-devel bzip2-devel \
-      libffi-devel sqlite-devel gnupg2 xz
+      libffi-devel sqlite-devel gnupg2 xz tar
     yum clean all
 fi
 
@@ -36,6 +36,6 @@ ln -sf /usr/local/bin/python3.7 /usr/bin/python
 python --version
 
 # install Pip    
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+curl -sL https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 pip --version
