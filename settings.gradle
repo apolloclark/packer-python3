@@ -16,4 +16,3 @@ include ':gradle-build:rhel8',
     ':gradle-build:ubuntu16.04',
     ':gradle-build:debian10',
     ':gradle-build:debian9'
-    
