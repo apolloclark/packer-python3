@@ -4,12 +4,15 @@ Packer, Ansible, Serverspec, project to create Python 3.x VM, AWS AMI, and Docke
 
 ## Requirements
 
-- Packer
-- Ansible
+- [Packer](https://packer.io/)
+- [Ansible](https://www.ansible.com/)
+- [Gradle](https://gradle.org/install/#manually)
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 - [Serverspec](https://serverspec.org/): gem install serverspec
 - [docker-api](https://github.com/swipely/docker-api/releases): gem install docker-api
 
 ## Install
+
 ```shell
 git clone --recurse-submodules https://github.com/apolloclark/packer-python3
 cd ./packer-python3
