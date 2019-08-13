@@ -48,8 +48,6 @@ gradle amzlinux2:test --project-dir gradle-build --rerun-tasks
 
 gradle test --parallel --project-dir gradle-build
 
-
-
 # Gradle, publish images
 gradle push --parallel --project-dir gradle-build
 
