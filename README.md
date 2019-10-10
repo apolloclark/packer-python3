@@ -50,7 +50,7 @@ gradle amzlinux2:test   --project-dir gradle-build --rerun-tasks
 rm -rf ./.gradle && gradle test --parallel --max-workers 4 --project-dir gradle-build
 
 # Gradle, publish images
-gradle test --parallel --max-workers 4 --project-dir gradle-build
+gradle push --parallel --max-workers 4 --project-dir gradle-build
 
 # Gradle, list tasks, and dependency graph
 gradle tasks --project-dir gradle-build
